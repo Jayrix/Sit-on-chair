@@ -7,7 +7,7 @@ font-family: Arial, sans-serif;
 
 .container{
 width:100%;
-max-width: 1600px;
+max-width: 1200px;
 margin:0 auto;
 
 }
@@ -26,52 +26,82 @@ float:left;
 
 
 /*Header*/
+body{
+  background: gray;
+}
 
 header {
   background-color: black;
   height: 60px;
   color: white;
-}
-
-header .container p.col {
   text-transform: uppercase;
   font-size: 22px;
+  font-weight: bold;
   line-height: 22px;
+  letter-spacing: .07em;
+}
+
+header p.col {
   padding: 19px 0;
 }
 
-header .container ul.col {
+header nav.col {
   float: right;
+}
+
+header nav.col>ul {
   list-style-type: none;
-
 }
 
-header .container ul.col>li {
+header nav.col>ul>li {
   display: inline-block;
-  margin-left: 67px;
-  text-transform: uppercase;
-  font-size: 22px;
-  line-height: 22px;
   padding: 19px 0;
+  margin-left: 2.5em;
   position: relative;
-
-
 }
 
-header li>ul {
-  background: black;
-  color:white;
+header nav.col>ul>li a {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+}
+
+
+header nav.col>ul>li .inner-list {
   list-style-type: none;
   position: absolute;
-  top: 30px;
+  top: 4.5em;
+  left: -1.5em;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: .1em;
+  background: black;
+  display: none;  /*PRZY OPACITY POJAWIA SIE ROWNIEZ PRZY HOVER NAD INNER-LIST WTFFFFF*/
 }
 
-header div.container ul.inner-list li{
+header nav.col>ul>li:hover{
+  padding-bottom: 10em;
+}
+
+header nav.col>ul>li:hover .inner-list  {
   display: block;
-  margin-left: 10px;
-  font-size: 22px;
-  line-height: 22px;
-  padding: 15px 0;
+}
 
 
+header nav.col>ul>li .inner-list>li {
+  padding: 1em 1em 0 1em;
+}
+
+header nav.col>ul>li .inner-list>li:last-child{
+  padding: 1em;
+}
+
+header nav.col>ul>li .inner-list-arrow{
+  position: absolute;
+  top:-13px;
+  left: calc(50% - 13px);
+  background: black;
+  width: 26px;
+  height: 26px;
+  transform: rotate(45deg) skew(7deg,7deg);
 }
