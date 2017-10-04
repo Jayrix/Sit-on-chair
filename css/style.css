@@ -125,20 +125,35 @@ header nav.col>ul>li .inner-list-arrow{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#919191', GradientType=0 );
 }
 
-.banner-arrow {
+.banner .banner-container {
+  width:100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.banner .container .banner-container .col {
+  width:50%;
+}
+
+image {
+  width:100%;
+  height: 100%;
+}
+
+.banner .container .banner-arrow {
   width:60px;
   height:60px;
   margin: 50px;
 }
 
-.banner-arrow:first-child {
+.banner .container .banner-arrow:first-child {
   border-left: 7px solid rgb(37, 201, 176);
   border-bottom: 7px solid rgb(37, 201, 176);
   border-bottom-left-radius: 10px;
   transform: rotate(45deg) skew(-12deg,-12deg);
 }
 
-.banner-arrow:last-child{
+.banner .container .banner-arrow:last-child{
   border-right: 7px solid rgb(37, 201, 176);
   border-bottom: 7px solid rgb(37, 201, 176);
   border-bottom-right-radius: 10px;
