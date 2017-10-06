@@ -81,14 +81,18 @@ header nav.col>ul>li .inner-list {
   letter-spacing: .1em;
   background: black;
   display: none;  /*PRZY OPACITY POJAWIA SIE ROWNIEZ PRZY HOVER NAD INNER-LIST WTFFFFF*/
+
 }
 
 header nav.col>ul>li:hover{
   padding-bottom: 10em;
+  z-index: 1; /*nakrywa margines z bannera(article.col) zeby padding-bottom dzialal poprawnie*/
+  margin-bottom: -100%; /* potrzebne zeby article.col nie przeskakiwal w dol przy wysunieciu listy.. jest to hotfix i poprawnosc jest nieznana */
 }
 
 header nav.col>ul>li:hover .inner-list  {
   display: block;
+
 }
 
 
@@ -166,7 +170,7 @@ header nav.col>ul>li .inner-list-arrow{
 .banner .container .image-container img {
   width: 100%;
   height: auto;
-  margin: 10% 0 0 5%;
+  margin: 10% 0 0 10%;
 
 }
 
@@ -175,14 +179,17 @@ header nav.col>ul>li .inner-list-arrow{
   text-align: center;
 
 
+
 }
 
 
 .banner .container article.col h2{
+
   font-size: 64px;
   text-transform: uppercase;
   word-spacing: 10px;
   margin-top: 37%;
+
 
 }
 
@@ -191,6 +198,7 @@ header nav.col>ul>li .inner-list-arrow{
   font-weight: 300;
   word-spacing: 5px;
   margin-top: 8%;
+
 
 }
 
@@ -205,4 +213,46 @@ header nav.col>ul>li .inner-list-arrow{
   width: 11.5em;
   height: 2.2em;
   margin-top: 10%;
+}
+
+/*sekcja CHAIRS*/
+
+.chairs {
+  background-color: white;
+  height: 600px;
+}
+
+.pricing {
+  height:500px;
+  background-color: beige;
+}
+
+.chairs .container .col {
+  width: 31.3%;    /* 93,9%*/
+  margin-top: 3%;
+
+}
+
+
+.chairs .container article.col {
+  border: 1px solid lightgray;
+  padding: 5% 2% 1.5% 2%;
+
+}
+
+.chairs .container article.col p {
+  font-size: 23px;
+  font-weight: 300;
+  color: gray;
+  margin-bottom: 6%;
+
+}
+
+.chairs .container .image-container.col{
+  margin-right: 3%; /*6%*/
+}
+
+.chairs .container .image-container.col img {
+  width: 100%;
+  height: auto;
 }
