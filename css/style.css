@@ -1,3 +1,6 @@
+/*RESET*/
+/*style nie sa responsywne*/
+
 *{
 margin: 0;
 padding: 0;
@@ -224,10 +227,7 @@ header nav.col>ul>li .inner-list-arrow{
   height: 600px;
 }
 
-.pricing { /********************tymczasowe****************************/
-  height:500px;
-  background-color: beige;
-}
+
 
 .chairs .container .col {
   width: 31.3%;    /* 93,9%*/
@@ -241,7 +241,7 @@ header nav.col>ul>li .inner-list-arrow{
 
 .chairs .container article.col {
   border: 1px solid lightgray;
-  padding: 5% 2% 1.5% 2%;
+  padding: 2% 2% 1.5% 2%;
 }
 
 
@@ -262,12 +262,15 @@ header nav.col>ul>li .inner-list-arrow{
 .chairs div.element-name figcaption{
   display: inline-block;
   font-size: 24px;
-  line-height: 33px;
+  line-height: 36px;
   font-weight: 700;
-  border-bottom: 0.5em solid rgb(37, 201, 176);
+  border-bottom: 0.45em solid rgb(37, 201, 176);
   margin: 3% 0 0 4%;
 }
 
+.chairs figure.image-container.col:nth-of-type(1) div.element-name figcaption{
+  width:44.5%;
+}
 
 
 .chairs div.element-name figcaption .product-name{
@@ -283,5 +286,129 @@ header nav.col>ul>li .inner-list-arrow{
 }
 
 .chairs .container article.col h4.element-name{
+  display: inline-block;
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 700;
+  border-bottom: 0.45em solid rgb(37, 201, 176);
+  width:44.5%;
+  margin-bottom: 4%;
+}
+
+
+/*sekcja PRICING*/
+
+.pricing {
+  height:1250px;
+  background-color: rgb(241, 241, 241);
+}
+
+.contact { /*******************************tynczasowe***************************************/
+  height: 1000px;
+  background: gray;
+}
+
+
+
+.pricing .container .row:nth-of-type(1) .col{
+  width: 100%;
+}
+
+.pricing .container .row .col h4.element-name{
+  display: block;
+  text-transform: uppercase;
+  color: rgb(100,100,100);
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  border-bottom: 0.4em solid rgb(37, 201, 176);
+  width:31.3%;
+  margin: 4% 0 7% 0;
+}
+
+.pricing .container .row:nth-of-type(2) .col{
+  width: 31.3%;
+  height: 865px;
+  border: 4px solid lightgray;
+  border-radius: 5px;
+  margin-right: 3%;
+  background-color: rgb(249, 249, 249);
+  position: relative;
+}
+
+.pricing .container .row:nth-of-type(2) .col:last-of-type{
+  margin-right: 0%;
+}
+
+.pricing .container .row:nth-of-type(2) .col .circle{
   position: absolute;
+  top: -6%;
+  left: 42%;
+  width: 16%;
+  border: 4px solid lightgray;
+  border-radius: 50%;
+  background-color: rgb(194,194,194);
+  box-shadow: inset 0 0 0 18px white;
+}
+
+.pricing .container .row:nth-of-type(2) .col .circle::before{ /*responsywny kwadrat(okrag)*/
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.pricing .container .row:nth-of-type(2) .col h5.pricing-heading {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(39, 199, 171);
+  margin: 10% 0;
+  font-weight: 400;
+}
+
+.pricing .container .row:nth-of-type(2) .col .subscription-circle {
+  background-color: white;
+  border: 4px solid lightgray;
+  width:40%;
+  margin: 0 auto;
+  border-radius: 50%;
+  position:relative;
+
+}
+
+.pricing .container .row:nth-of-type(2) .col .subscription-circle::before{ /*responsywny kwadrat(okrag)*/
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+ .span-container {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  text-align: center;
+}
+
+ .col .subscription-circle .span-container > span:first-child {
+  display: block;
+  color:rgb(194,194,194);
+  font-size: 64px;
+  font-weight: 900;
+}
+
+ .col .subscription-circle .span-container > span:first-child > span {
+   vertical-align: -15%;
+}
+
+ .subscription-circle .span-container > span:first-child  > span > span {
+   vertical-align: text-top;
+   font-size: 20px;
+}
+
+.col .subscription-circle .span-container > span:nth-child(2) {
+  color:rgb(194,194,194);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
 }
