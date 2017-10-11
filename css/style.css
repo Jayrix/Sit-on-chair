@@ -331,11 +331,12 @@ header nav.col>ul>li .inner-list-arrow{
   font-weight: 400;
   border-bottom: 0.4em solid rgb(37, 201, 176);
   width:30%;
-  margin: 3% 0 7% 0;
+  margin: 3% 0 7% 1.5%;
 }
 
 .pricing .container .row:nth-of-type(2) .col{
   width: 33.3%;
+  padding: 0 1.5%;
   /*height: 80%;*/
   /*border: 4px solid lightgray;*/
   /*border-radius: 5px;*/
@@ -346,32 +347,32 @@ header nav.col>ul>li .inner-list-arrow{
 
 
 .pricing .col .subscription-container{
-  height: 760px;
+  height: 770px;
   border: 4px solid lightgray;
   border-radius: 5px;
   background-color: rgb(249, 249, 249);
-  /*position: relative;*/
+  position: relative;
 
 }
 
 #Subscription-container-1{
-  margin-right: 9%;
+
 }
 
 #Subscription-container-2{
-  margin-right: 9%;
+
 }
 
 #Subscription-container-3{
 
 }
 
-.subscription-container .subscription-inner-container-square {
+.subscription-container .square-box {
   width:100%;
   position: relative;
 }
 
-.subscription-container .subscription-inner-container-square::before{ /*responsywny kwadrat*/
+.subscription-container .square-box::before{ /*responsywny kwadrat*/
   content: "";
   display: block;
   padding-top: 100%;
@@ -381,6 +382,15 @@ header nav.col>ul>li .inner-list-arrow{
   /*margin-right: 0%;*/
 /*}*/
 
+.square-content{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+}
+
 .subscription-container .circle{
   position: absolute;
   top: -12%;
@@ -389,24 +399,9 @@ header nav.col>ul>li .inner-list-arrow{
   border: 4px solid lightgray;
   border-radius: 50%;
   background-color: rgb(194,194,194);
-  box-shadow: inset 0 0 0 1.1vw white;
-}
-
-/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXU*/
-
-
-.subscription-container h5.pricing-heading {
-  position: absolute;
-  font-size: 38px;
-  text-transform: uppercase;
-  text-align: center;
-  color: rgb(39, 199, 171);
-  margin: 9% 0;
-  font-weight: 400;
+  box-shadow: inset 0 0 0 1.15vw white;
 
 }
-
-
 
 .subscription-container .circle::before{ /*responsywny kwadrat(okrag)*/
   content: "";
@@ -414,16 +409,28 @@ header nav.col>ul>li .inner-list-arrow{
   padding-top: 100%;
 }
 
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXU*/
+
+
+.subscription-container h5.pricing-heading {
+  /*position: absolute;*/
+  font-size: 38px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(39, 199, 171);
+  margin: 8% 0;
+  font-weight: 400;
+
+}
 
 
 .subscription-container .subscription-circle {
-  position:absolute;
+  position:relative;
   background-color: white;
   border: 4px solid lightgray;
   width:40%;
   margin: 0 auto;
   border-radius: 50%;
-
 
 }
 
@@ -433,9 +440,9 @@ header nav.col>ul>li .inner-list-arrow{
   padding-top: 100%;
 }
  .span-container {
-  /*position: absolute;*/
-  /*top: 20%;*/
-  /*left: 25%;*/
+  position: absolute;
+  top: 20%;
+  left: 25%;
 }
 
 .subscription-circle .span-container > span:first-child {
@@ -443,28 +450,223 @@ header nav.col>ul>li .inner-list-arrow{
   color:rgb(194,194,194);
   font-size: 3.5vw;
   font-weight: 900;
+
 }
 
 .subscription-circle .span-container > span:first-child > span {
-   vertical-align: -15%;
+  display: inline-block;
+  vertical-align: -11%;
 }
 
 .subscription-circle .span-container > span:first-child  > span > span {
-   vertical-align: text-top;
-   font-size: 1.3vw;
+  display: inline-block;
+  vertical-align: text-top;
+  font-size: 1.3vw;
 }
 
 .subscription-circle .span-container > span:nth-child(2) {
+  display: block;
   color:rgb(194,194,194);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.25vw;
   line-height: 22px;
   font-weight: 700;
-  /*position: absolute;*/
-  /*bottom:-22%;*/
-  /*left: -10%;*/
+  position: absolute;
+  bottom:-22%;
+  left: -10%;
+
+}
+
+.lower-box {
+  width:100%;
+  position:absolute;
+  top:50%;
+}
+
+
+.lower-box div:nth-of-type(1){
+  width: 100%;
+  height: 64px;
+  text-align: center;
+  background-color: rgb(228,228,228);
+  font-size:36px;
+  line-height: 1.6;
+  color: rgb(150,150,150);
+  letter-spacing: 1px;
+}
+
+.lower-box div:nth-of-type(2){
+  width: 100%;
+  height: 64px;
+  text-align: center;
+  background-color: rgb(241,241,241);
+  font-size:36px;
+  line-height: 1.6;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+ .lower-box button {
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  font-size: 26px;
+  background-color: rgb(37, 201, 176);
+  width: 7.5em;
+  height: 2em;
+  margin-top: 33%; /*margines jest do subscription-container*/
+  margin-left:calc(50% - 3.75em); /*polowa - auto nie dziala*/
+}
+
+ /*** DRUGA COL PRICING ******/
+
+.pricing .col:nth-of-type(2) .subscription-container{
+  border: 4px solid rgb(39, 199, 171);
+  background-color: rgb(39, 199, 171);
+}
+
+
+.col:nth-of-type(2) .subscription-container .circle{
+  border: 4px solid rgb(39, 199, 171);
+  background-color: rgb(241, 241, 241);
+  box-shadow: inset 0 0 0 1.15vw rgb(39, 199, 171);
 
 }
 
 
+.col:nth-of-type(2) .subscription-container h5.pricing-heading {
+  color: white;
+}
+
+
+.col:nth-of-type(2) .subscription-container .subscription-circle {
+  background-color: white;
+  border: 4px solid rgb(39, 199, 171);
+}
+
+.col:nth-of-type(2) .span-container {
+  top: 24%;
+}
+
+.col:nth-of-type(2) .subscription-circle .span-container > span:first-child {
+  color:rgb(39, 199, 171);
+}
+
+.col:nth-of-type(2) .subscription-circle .span-container > span:first-child > span {
+  display: inline-block;
+  vertical-align: 1%;
+}
+
+.col:nth-of-type(2) .subscription-circle .span-container > span:first-child  > span > span {
+  display: inline-block;
+  vertical-align: text-top;
+  font-size: 1.3vw;
+}
+
+.col:nth-of-type(2) .subscription-circle .span-container > span:nth-child(2) {
+  display: block;
+  color:rgb(39, 199, 171);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.25vw;
+  line-height: 22px;
+  font-weight: 700;
+  position: absolute;
+  bottom:-22%;
+  left: -10%;
+
+}
+
+.col:nth-of-type(2) .lower-box div:nth-of-type(1){
+  background-color: white;
+  color: rgb(150,150,150);
+}
+
+.col:nth-of-type(2) .lower-box div:nth-of-type(2){
+  background-color: rgb(241,241,241);
+  color: rgb(150,150,150);
+}
+
+.lower-box div:nth-of-type(3){
+  width: 100%;
+  height: 64px;
+  text-align: center;
+  background-color: white;
+  font-size:36px;
+  line-height: 1.6;
+  color: rgb(150,150,150);
+  letter-spacing: 1px;
+}
+
+.col:nth-of-type(2) .lower-box button {
+  color: rgb(39, 199, 171);
+  background-color: white;
+  margin-top: 21%;
+
+}
+
+
+
+/***********3 COL PRICING*********************/
+
+.col:nth-of-type(3) .lower-box div:nth-of-type(3){
+  background-color: rgb(228,228,228);
+}
+
+.col:nth-of-type(3) .lower-box div:nth-of-type(4){
+  width: 100%;
+  height: 64px;
+  text-align: center;
+  background-color: rgb(241,241,241);
+  font-size:36px;
+  line-height: 1.6;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+
+.col:nth-of-type(3) .subscription-circle .span-container > span:first-child {
+  display: block;
+  color:rgb(194,194,194);
+  font-size: 3.5vw;
+  font-weight: 900;
+
+
+}
+
+.col:nth-of-type(3) .span-container{
+  top: 22%;
+  left: 10%;
+}
+
+.col:nth-of-type(3) .subscription-circle .span-container > span:first-child > span {
+  display: inline-block;
+  vertical-align: -11%;
+  display: inline-block;
+  vertical-align: text-top;
+  font-size: 1.3vw;
+}
+
+
+
+.col:nth-of-type(3) .subscription-circle .span-container > span:nth-child(2) {
+  display: block;
+  color:rgb(194,194,194);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.25vw;
+  line-height: 22px;
+  font-weight: 700;
+  position: absolute;
+  bottom:-32%;
+  left: 10%;
+
+}
+
+
+.col:nth-of-type(3) .lower-box button {
+  margin-top: 7%;
+
+}
