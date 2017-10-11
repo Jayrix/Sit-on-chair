@@ -86,7 +86,7 @@ header nav.col>ul>li .inner-list {
   letter-spacing: .1em;
   background: black;
   display: none;  /*PRZY OPACITY POJAWIA SIE ROWNIEZ PRZY HOVER NAD INNER-LIST WTFFFFF*/
-
+  /*opacity: 0;*/
 }
 
 header nav.col>ul>li:hover{
@@ -97,6 +97,7 @@ header nav.col>ul>li:hover{
 
 header nav.col>ul>li:hover .inner-list  {
   display: block;
+  /*opacity: 1;*/
 
 }
 
@@ -349,7 +350,7 @@ header nav.col>ul>li .inner-list-arrow{
   border: 4px solid lightgray;
   border-radius: 5px;
   background-color: rgb(249, 249, 249);
-  position: relative;
+  /*position: relative;*/
 
 }
 
@@ -365,20 +366,47 @@ header nav.col>ul>li .inner-list-arrow{
 
 }
 
+.subscription-container .subscription-inner-container-square {
+  width:100%;
+  position: relative;
+}
+
+.subscription-container .subscription-inner-container-square::before{ /*responsywny kwadrat*/
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
 /*.pricing .container .row:nth-of-type(2) .col:last-of-type{*/
   /*margin-right: 0%;*/
 /*}*/
 
 .subscription-container .circle{
   position: absolute;
-  top: -8%;
+  top: -12%;
   left: 41%;
   width: 18%;
   border: 4px solid lightgray;
   border-radius: 50%;
   background-color: rgb(194,194,194);
-  box-shadow: inset 0 0 0 18px white;
+  box-shadow: inset 0 0 0 1.1vw white;
 }
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXU*/
+
+
+.subscription-container h5.pricing-heading {
+  position: absolute;
+  font-size: 38px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(39, 199, 171);
+  margin: 9% 0;
+  font-weight: 400;
+
+}
+
+
 
 .subscription-container .circle::before{ /*responsywny kwadrat(okrag)*/
   content: "";
@@ -386,22 +414,16 @@ header nav.col>ul>li .inner-list-arrow{
   padding-top: 100%;
 }
 
-.subscription-container h5.pricing-heading {
-  font-size: 38px;
-  text-transform: uppercase;
-  text-align: center;
-  color: rgb(39, 199, 171);
-  margin: 9% 0;
-  font-weight: 400;
-}
+
 
 .subscription-container .subscription-circle {
+  position:absolute;
   background-color: white;
   border: 4px solid lightgray;
   width:40%;
   margin: 0 auto;
   border-radius: 50%;
-  position:relative;
+
 
 }
 
@@ -411,9 +433,9 @@ header nav.col>ul>li .inner-list-arrow{
   padding-top: 100%;
 }
  .span-container {
-  position: absolute;
-  top: 20%;
-  left: 25%;
+  /*position: absolute;*/
+  /*top: 20%;*/
+  /*left: 25%;*/
 }
 
 .subscription-circle .span-container > span:first-child {
@@ -439,9 +461,10 @@ header nav.col>ul>li .inner-list-arrow{
   font-size: 1.25vw;
   line-height: 22px;
   font-weight: 700;
-  position: absolute;
-  bottom:-22%;
-  left: -10%;
+  /*position: absolute;*/
+  /*bottom:-22%;*/
+  /*left: -10%;*/
 
 }
+
 
